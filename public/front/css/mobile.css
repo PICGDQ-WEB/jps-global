@@ -1,0 +1,33 @@
+@media screen and (max-width: 1024px) {
+  .ball {
+    display: none;
+  }
+  .nav-item {
+    padding: 10px 0px;
+  }
+  .counterContainer {
+    margin-bottom: 50px;
+  }
+  .nav-link {
+    font-size: 0.78rem !important;
+  }
+  #creativeBanner {
+    height: 150px;
+  }
+  #infraImage {
+    height: 40vh;
+  }
+  #top__header {
+    padding-top: 80px !important;
+    height: auto !important;
+  }
+  .flexxolumnreverse {
+    flex-direction: column-reverse;
+  }
+  #imagePreview .swiper-slide img {
+    height: 400px;
+  }
+  #thumbs .swiper-slide img {
+    width: auto !important;
+  }
+}/*# sourceMappingURL=mobile.css.map */
