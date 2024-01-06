@@ -26,16 +26,16 @@
                                     <a href="/">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/">About us</a>
+                                    <a href="{{route('intro')}}">About us</a>
                                 </li>
                                 <li>
-                                    <a href="/">Infrastructure</a>
+                                    <a href="{{route('infrastructure')}}">Infrastructure</a>
                                 </li>
                                 <li>
-                                    <a href="/">Media</a>
+                                    <a href="{{route('media')}}">Media</a>
                                 </li>
                                 <li>
-                                    <a href="/">Blog</a>
+                                    <a href="{{route('blog')}}">Blog</a>
                                 </li>
                             </ul>
                         </div>
@@ -43,10 +43,10 @@
                             <h2>Business</h2>
                             <ul>
                                 <li>
-                                    <a href="/">Our brands</a>
+                                    <a href="{{route('brands')}}">Our brands</a>
                                 </li>
                                 <li>
-                                    <a href="/">Our products</a>
+                                    <a href="{{route('products')}}">Our products</a>
                                 </li>
                             </ul>
                         </div>
@@ -68,10 +68,10 @@
                             <h2>Help & Support</h2>
                             <ul>
                                 <li>
-                                    <a href="/">Faq's</a>
+                                    <a href="{{route('faq')}}">Faq's</a>
                                 </li>
                                 <li>
-                                    <a href="/">Contact us</a>
+                                    <a href="{{route('contact')}}">Contact us</a>
                                 </li>
                             </ul>
                         </div>

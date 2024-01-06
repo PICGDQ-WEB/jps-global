@@ -56,14 +56,13 @@
             </div>
             <div class="col-lg-3 col-md-6 my-md-3 mb-3">
                 <div class="footer__head mb-2" style="font-size: 1.2rem;">Subscribe to our newsletter</div>
-                <form actionUrl="">
-                    @csrf
+                <form id="enquiryForm">
                     <div class="mb-3">
                         <label for="" style="font-size: 13px; color: #eee;">Your email</label>
                         <input type="email" name="email" class="input_field">
                     </div>
                     <div>
-                        <button class="btn btn-warning btn-sm"><i class="fa-solid fa-arrow-right"></i> Subscribe</button>
+                        <button class="btn btn-warning btn-sm" type="submit"><i class="fa-solid fa-arrow-right"></i> Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -86,3 +85,34 @@
         </div>
     </div>
 </footer>
+
+<script>
+$('#enquiryForm').on('submit', function(event) {
+    event.preventDefault();
+    $(this).children().find('input').prop('disabled', true);
+    $(this).children().find('button').prop('disabled', true);
+    $(this).children().find('button').html('Please wait');
+    
+    var formData = new FormData(this);
+    formData.append('service_id', 'service_c34325h');
+    formData.append('template_id', 'template_enquiry');
+    formData.append('user_id', '_M_qN6dylc600UkEF');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false
+    }).done(function() {
+        alert('Your mail is sent!');
+        $(this).children().find('input').prop('disabled', false);
+        $(this).children().find('button').prop('disabled', false);
+        $(this).children().find('button').html('Subscribe');
+    }).fail(function(error) {
+        alert('Oops... ' + JSON.stringify(error));
+        $(this).children().find('input').prop('disabled', false);
+        $(this).children().find('button').prop('disabled', false);
+        $(this).children().find('button').html('Retry');
+    });
+});
+</script>
