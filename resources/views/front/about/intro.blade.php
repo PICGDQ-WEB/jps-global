@@ -10,8 +10,8 @@
 <section>
     <div class="bg-black text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
-            <h1 style="font-weight: 900;">Sustainable, Transparent, Safe</h1>
-            <p class="text-uppercase text-secondary">WE AIM TO BE THE DISRUPTOR IN BREAKING BARRIERS USING TECHNOLOGY TO CONNECT GROWERS TO CONSUMERS.</p>
+            <h1 style="font-weight: 900;">Ready to Taste the Finest?</h1>
+            <p class="text-uppercase text-secondary">Take a journey with us where taste meets uncompromised quality – because your culinary satisfaction starts with the finest rice.</p>
         </div>
     </div>
 </section>
@@ -23,8 +23,8 @@
         <div class="row m-0">
             <div class="col-lg-6 mb-3">
                 <h2>About {{env('APP_NAME')}}</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maiores excepturi provident perspiciatis. Qui accusamus sapiente quia corrupti explicabo veritatis fugit voluptates sit porro commodi. Itaque ab voluptates blanditiis! Nesciunt?</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <a href="#">Odit nulla vel amet eum, assumenda itaque?</a></p>
+                <p>We deliver on time and ensure top-notch quality. Tahar boasts a modern testing facility, fully equipped to uphold excellent quality assurance and standards. Our proficiency further lies in meeting even the most demanding customer requirements.</p>
+                <p>With cutting-edge rice milling equipment, get complete production to delivery solutions.</p>
 
                 <div class="row m-0 mb-3">
                     <div class="col-lg-6 col-6 mb-3">
@@ -54,27 +54,27 @@
 
 <section class="bg-light py-5">
     <div class="container my-4">
-        <h2 class="col-lg-6" style="line-height: 45px !important;">We are a growing team who is passionate about bringing sustainable products to the market!</h2>
+        <h2 class="col-lg-6" style="line-height: 45px !important;">We go beyond delivering excellent taste and quality of rice; certain unique aspects set us apart, making us superior to others.</h2>
         <div class="row m-0 my-md-5">
             <div class="col-lg-4 pe-0">
                 <div class="card rounded-0 p-4 bg-light border-0">
                     <i class="text-green fa-solid fa-infinity fa-3x"></i>
-                    <h3 class="mt-3 mb-4">Sustainable</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, neque illum tenetur voluptatem unde soluta necessitatibus. Quaerat animi corrupti ullam consequatur quia architecto enim corporis laudantium vel quis voluptatum eos quasi dignissimos autem iure sint minima eius obcaecati, nobis assumenda?</p>
+                    <h3 class="mt-3 mb-4">Certified Supply and Manufacturing</h3>
+                    <p>Each rice product undergoes a meticulous journey, adhering to the highest standards, ensuring that every aspect of our operations is synonymous with excellence.</p>
                 </div>
             </div>
             <div class="col-lg-4 pe-0">
                 <div class="card rounded-0 p-4 bg-light border-0">
                     <i class="text-green fa-regular fa-square-full fa-3x"></i>
-                    <h3 class="mt-3 mb-4">Transparent</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, neque illum tenetur voluptatem unde soluta necessitatibus. Quaerat animi corrupti ullam consequatur quia architecto enim corporis laudantium vel quis voluptatum eos quasi dignissimos autem iure sint minima eius obcaecati, nobis assumenda?</p>
+                    <h3 class="mt-3 mb-4">From Fields to Worldwide</h3>
+                    <p>Our journey extends far beyond the fields where our grains are nurtured. From these fields, we embark on a global expedition, delivering not just products but a promise of quality that knows no borders. </p>
                 </div>
             </div>
             <div class="col-lg-4 pe-0">
                 <div class="card rounded-0 p-4 bg-light border-0">
                     <i class="text-green fa-solid fa-shield-halved fa-3x"></i>
-                    <h3 class="mt-3 mb-4">Safe & Secure</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, neque illum tenetur voluptatem unde soluta necessitatibus. Quaerat animi corrupti ullam consequatur quia architecto enim corporis laudantium vel quis voluptatum eos quasi dignissimos autem iure sint minima eius obcaecati, nobis assumenda?</p>
+                    <h3 class="mt-3 mb-4">Procure, Store, and Export</h3>
+                    <p>We procure with precision, store with care, and export with dedication, ensuring that at every stage, our products maintain the highest standards.</p>
                 </div>
             </div>
         </div>
@@ -83,8 +83,8 @@
 
 <section class="py-5">
     <div class="container my-4">
-        <h2>Our Team</h2>
-        <p>Meet our incredible team – we would love to meet you!</p>
+        <h2>Our Team of Experts</h2>
+        <p>At JPS Global, our team of experts is the driving force, bringing taste, quality, and satisfaction to the table. </p>
 
         <div class="row m-0 py-5">
             <div class="col-lg-4 col-md-6 mb-4">

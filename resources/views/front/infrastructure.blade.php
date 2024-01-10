@@ -22,12 +22,12 @@
     <div class="container py-4 mt-md-4 mb-md-3 py-md-5 px-0">
         <div class="row m-0">
             <div class="col-lg-6 mb-3">
-                <img src="/front/media/images/jasmine-rice.jpg" alt="" class="w-100">
+                <img src="/front/media/images/rice-variety.jpeg" alt="" class="w-100">
             </div>
             <div class="col-lg-6">
-                <h2 class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, asperiores?</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, reprehenderit accusamus eum nam deleniti ratione optio. Blanditiis a temporibus quasi, laborum iste neque ipsam quis quas voluptatem. Repudiandae illum molestiae voluptas voluptatum molestias pariatur at perferendis quidem, enim reprehenderit eos vitae accusamus libero cumque, unde reiciendis qui magnam, laudantium incidunt.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis magni aut et distinctio provident esse molestiae laboriosam nesciunt quia molestias!</p>
+                <h2 class="mb-3">Top-notch Quality Every Step of the Way</h2>
+                <p>In our quest to provide you with the best rice experience, we focus on efficiency and quality in every detail. From our updated storage and distribution centers to our smart packaging solutions, each step is tailored to make sure that you taste the difference.</p>
+                <p>It's our promise to bring you not just rice but a culinary journey marked by freshness, superior quality, and the convenience you deserve.</p>
                 <div class="mt-4 pt-2">
                     <a href="{{route('contact')}}">
                         <button class="btn btn-success px-4 py-3 rounded-0">Contact Us</button>
@@ -44,7 +44,7 @@
 
 <section>
     <div class="container py-5">
-        <h2 class="col-lg-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi tempora ducimus ab possimus facere ut nulla libero et debitis dipisci voluptatum.</h2>
+        <h2 class="col-lg-12">A Benchmark for Quality in India's Rice Production and Trading Sector</h2>
         <div class="pt-5">
             @php
             $location = '/front/media/infra';

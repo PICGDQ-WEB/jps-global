@@ -39,7 +39,9 @@
             </div>
             <div class="col-lg-6 col-md-12 mb-3">
                 <p class="text-light">At the heart of {{env('APP_NAME')}} is a profound dedication to quality that echoes through every grain we offer. We handpick the best grains to for consistently high-quality product. From field to plate, every bite reflects our commitment to delivering nothing but the best.</p>
-                <button class="btn btn-outline-success rounded-0 py-3 px-4 mt-3">Know More</button>
+                <a href="{{route('intro')}}">
+                    <button class="btn btn-outline-success rounded-0 py-3 px-4 mt-3">Know More</button>
+                </a>
             </div>
         </div>
     </div>
@@ -55,21 +57,21 @@
         <div class="row m-0 mt-5">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card rounded-0">
-                    <img src="/front/media/images/jasmine-rice.jpg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
+                    <img src="/front/media/images/rice quality assurance.jpeg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
                     <h3 class="mt-3 mx-3 mb-0" style="font-weight: 900;">Quality Assurance</h3>
                     <p class="p-3 text-secondary">We handpick the best grains to ensure a consistently high-quality product.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card rounded-0">
-                    <img src="/front/media/images/jasmine-rice.jpg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
+                    <img src="/front/media/images/vigilant-workforce.jpeg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
                     <h3 class="mt-3 mx-3 mb-0" style="font-weight: 900;">Vigilant Workforce</h3>
                     <p class="p-3 text-secondary">Qualified and skilled workforce, with manufacturing being monitored around-the-clock.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card rounded-0">
-                    <img src="/front/media/images/jasmine-rice.jpg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
+                    <img src="/front/media/images/rice-variety.jpeg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
                     <h3 class="mt-3 mx-3 mb-0" style="font-weight: 900;">Rice Variety</h3>
                     <p class="p-3 text-secondary">Discover a diverse range of Basmati rice to suit every culinary need.</p>
                 </div>
@@ -90,11 +92,13 @@
                         <p class="text-light">Equipped with a state-of-the-art testing facility in our mill, we uphold stringent quality standards that only meets but exceeds expectations. We are dedicated to delivering superior quality in terms of taste, nutritional value, and overall satisfaction.</p>
                         <p class="text-light">Join us on a journey where tradition and innovation come together to bring you the finest rice experience from Haryana.</p>
                     </div>
-                    <button class="btn btn-outline-success rounded-0 py-3 px-4">Learn More</button>
+                    <a href="{{route('intro')}}">
+                        <button class="btn btn-outline-success rounded-0 py-3 px-4">Learn More</button>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 p-0">
-                <img src="/front/media/images/jasmine-rice.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover; ">
+                <img src="/front/media/images/aboutus.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
             </div>
         </div>
     </div>
@@ -139,13 +143,15 @@
     <div class=" pb-5 mb-3 px-0">
         <div class="row m-0 justify-content-center">
             <div class="col-lg-6 col-md-12 p-0">
-                <img src="/front/media/images/jasmine-rice.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover; ">
+                <img src="/front/media/images/we-serve-authencity.jpeg" alt="" style="height: 100%; width: 100%; object-fit: cover; ">
             </div>
             <div class="col-lg-6 col-md-12 p-4 p-md-5 bg-dark">
                 <div class="p-md-4">
                     <h2 class="text-light" style="font-size: 2.7rem;">We Serve Authenticity</h2>
                     <p class="text-light py-4">We start in the fields, carefully growing and harvesting grains that capture true authenticity. Moving from the fields to processing, each step reflects our strong dedication to providing rice that's more than just food – it's a genuine experience filled with flavor and traditional craftsmanship. Trust us to bring you the authenticity you crave, from our fields to your table.</p>
-                    <button class="btn btn-outline-success rounded-0 py-3 px-4">Elevate Every Meal</button>
+                    <a href="{{route('infrastructure')}}">
+                        <button class="btn btn-outline-success rounded-0 py-3 px-4">Elevate Every Meal</button>
+                    </a>
                 </div>
             </div>
         </div>

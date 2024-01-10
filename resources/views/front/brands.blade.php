@@ -45,7 +45,7 @@
             <div class="col-10 col-lg-5 col-md-10 px-3 py-4 bg-black">
                 <div style="font-size: 0.8rem;" class="text-secondary text-center">LET'S WORK TOGETHER</div>
                 <h2 class="text-light text-center my-3" style="font-size: 2.8rem; font-weight: 900;">Contact us for more information</h2>
-                <p class="text-secondary text-center container col-md-11">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab fugiat nulla saepe doloribus expedita, omnis voluptatibus provident soluta assumenda, molestias hic iste!</p>
+                <p class="text-secondary text-center container col-md-11">Reach Out and Elevate Your Dining Experience with Us!</p>
                 <div class="text-center py-3">
                     <a href="{{route('contact')}}">
                         <button class="btn btn-outline-light px-4 py-3 rounded-0">Contact Us</button>

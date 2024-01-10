@@ -20,7 +20,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{route('brands')}}">Our Brands</a></li>
-                <li><a class="dropdown-item" href="{{route('products')}}">Our Products</a></li>
+                {{-- <li><a class="dropdown-item" href="{{route('products')}}">Our Products</a></li> --}}
             </ul>
           </li>
           <li class="nav-item">
