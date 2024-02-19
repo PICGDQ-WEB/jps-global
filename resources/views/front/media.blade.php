@@ -21,7 +21,7 @@
 <section>
     <div class="container py-md-5 mt-5 mb-4">
         @php
-            $location = '/front/media/images';
+            $location = '/front/media/og';
             $path = public_path($location);
             $files = preg_grep('~\.(jpeg|jpg|png)$~', scandir($path));
             @endphp

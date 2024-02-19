@@ -28,25 +28,25 @@
 
                 <div class="row m-0 mb-3">
                     <div class="col-lg-6 col-6 mb-3">
-                        <div class="counterNumber">2015</div>
+                        <div class="counterNumber">2023</div>
                         <div class="counterDesc text-capitalize">Founded</div>
                     </div>
                     <div class="col-lg-6 col-6 mb-3">
-                        <div class="counterNumber">79+</div>
-                        <div class="counterDesc text-capitalize">Cities</div>
+                        <div class="counterNumber">200+ per day</div>
+                        <div class="counterDesc text-capitalize">Production Capacity</div>
                     </div>
-                    <div class="col-lg-6 col-6 mb-3">
+                    {{-- <div class="col-lg-6 col-6 mb-3">
                         <div class="counterNumber">9200+</div>
                         <div class="counterDesc text-capitalize">Orders</div>
                     </div>
                     <div class="col-lg-6 col-6 mb-3">
                         <div class="counterNumber">7200+</div>
                         <div class="counterDesc text-capitalize">Acres</div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-6 mb-3">
-                <img src="/front/media/images/aboutus.jpg" alt="" class="w-100">
+                <img src="/front/media/og/jps.jpeg" alt="" class="w-100">
             </div>
         </div>
     </div>
@@ -89,10 +89,10 @@
         <div class="row m-0 py-5">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card product__card">
-                    <img src="/front/media/images/team1.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;">
+                    {{-- <img src="/front/media/images/team1.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;"> --}}
                     <div class="p-3">
-                        <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Anurag Pandey</h3>
-                        <p>My Designation</p>
+                        <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Yoginder Singh</h3>
+                        <p>CMD</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut delectus alias magni libero, aperiam ratione expedita, voluptates cumque maxime animi fuga perferendis sequi cupiditate eum possimus qui sint!</p>
                         <div>
                             <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
@@ -103,10 +103,10 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card product__card">
-                    <img src="/front/media/images/team3.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;">
+                    {{-- <img src="/front/media/images/team3.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;"> --}}
                     <div class="p-3">
-                        <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Vidya Venkatesh</h3>
-                        <p>My Designation</p>
+                        <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Yuvraj Rana</h3>
+                        <p>Director</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut delectus alias magni libero, aperiam ratione expedita, voluptates cumque maxime animi fuga perferendis sequi cupiditate eum possimus qui sint!</p>
                         <div>
                             <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
@@ -117,10 +117,10 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card product__card">
-                    <img src="/front/media/images/team2.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;">
+                    {{-- <img src="/front/media/images/team2.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;"> --}}
                     <div class="p-3">
-                        <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Kamal Kotil</h3>
-                        <p>My Designation</p>
+                        <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Siddharth Singh</h3>
+                        <p>Director</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut delectus alias magni libero, aperiam ratione expedita, voluptates cumque maxime animi fuga perferendis sequi cupiditate eum possimus qui sint!</p>
                         <div>
                             <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>

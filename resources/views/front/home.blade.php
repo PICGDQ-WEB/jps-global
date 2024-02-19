@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 p-0">
-                <img src="/front/media/images/aboutus.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                <img src="/front/media/og/jps.jpeg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
             </div>
         </div>
     </div>
@@ -106,8 +106,8 @@
     {{-- Counter  --}}
     <div class="bg-warning p-5 shadow-sm">
         <div class="container p-0">
-            <div class="row m-0 text-dark">
-                <div class="col-6 col-lg-3 col-md-4 col-sm-6 my-2" id="counterContainer">
+            <div class="row m-0 text-dark justify-content-center">
+                {{-- <div class="col-6 col-lg-3 col-md-4 col-sm-6 my-2" id="counterContainer">
                     <div>
                         <div class="text-center"><i class="fa-solid fa-users fa-xl"></i></div>
                         <div class="counterNumber text-center">1200+</div>
@@ -133,6 +133,13 @@
                         <div class="text-center"><i class="fa-solid fa-city fa-xl"></i></div>
                         <div class="counterNumber text-center">79+</div>
                         <p class="mb-0 counterDesc text-center">Cities</p>
+                    </div>
+                </div> --}}
+                <div class="col-6 col-lg-3 col-md-4 col-sm-6 my-2" id="counterContainer">
+                    <div>
+                        <div class="text-center"><i class="fa-solid fa-city fa-xl"></i></div>
+                        <div class="counterNumber text-center">200+ Per Day</div>
+                        <p class="mb-0 counterDesc text-center">Production Capacity</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +167,7 @@
 {{-- End About --}}
 
 {{-- Products --}}
-<section class="mb-md-5 pb-4">
+{{-- <section class="mb-md-5 pb-4">
     <div class="container pt-3 my-4 px-0">
         <div class="text-center">What we provide?</div>
         <h2 style="font-size: 2.7rem; font-weight: 900;" class="text-center my-3">Our Signature Rice Products</h2>
@@ -187,7 +194,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 {{-- End Products --}}
 
 {{-- contact us  --}}

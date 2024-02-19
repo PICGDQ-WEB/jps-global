@@ -7,17 +7,17 @@
 @section('body')
 
 {{-- Header Top  --}}
-<section>
+{{-- <section>
     <div class="bg-black text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <p class="text-uppercase text-secondary">Our brands</p>
             <h1 style="font-weight: 900;">Welcome to {{env('APP_NAME')}}</h1>
         </div>
     </div>
-</section>
+</section> --}}
 {{-- End Header Top  --}}
 
-<section>
+{{-- <section>
 
     <div>
         <img src="/front/media/brands/brand1.jpeg" alt="" class="w-100" style="object-fit: cover; object-position: center; z-index:1;">
@@ -36,11 +36,15 @@
         </div>
     </div>
 
-</section>
+</section> --}}
+
+<div>
+    <img src="/front/media/images/coming-soon.jpg" alt="" style="width: 100%; height: 95vh; object-fit: contain; background-color: rgb(27,24,31);">
+</div>
 
 {{-- contact us  --}}
 <section>
-    <div class="p-0 bg-dark" style="height: 75vh;">
+    <div class="p-0" style="height: 75vh; background-color: rgb(27,24,31);">
         <div class="d-flex align-items-center justify-content-center m-0" style="height: 100%; width: 100%;">
             <div class="col-10 col-lg-5 col-md-10 px-3 py-4 bg-black">
                 <div style="font-size: 0.8rem;" class="text-secondary text-center">LET'S WORK TOGETHER</div>

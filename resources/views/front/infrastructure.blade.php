@@ -39,7 +39,7 @@
 </section>
 
 <section>
-    <img src="/front/media/images/aboutus.jpg" alt="" style="width: 100%; object-fit: cover; object-position: bottom;" id="infraImage">
+    <img src="/front/media/og/image1.jpeg" alt="" style="width: 100%; object-fit: cover; object-position: center;" id="infraImage">
 </section>
 
 <section>
