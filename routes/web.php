@@ -16,7 +16,6 @@ use App\Http\Controllers\BrandsController;
 
 // Master
 use App\Http\Controllers\MasterController;
-use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\AdminPostsController;
 use App\Http\Controllers\AdminProductsController;
 // End Master
@@ -39,12 +38,13 @@ Route::prefix('/')->group(function () {
 
     Route::prefix('/products')->group(function () {
         Route::get('/', [ProductsController::class, 'products'])->name('products');
-        Route::get('/product', [ProductsController::class, 'product'])->name('product');
+        Route::get('/{category}', [ProductsController::class, 'category'])->name('category');
+        // Route::get('/product', [ProductsController::class, 'product'])->name('product');
     });
     
     Route::prefix('/blog')->group(function () {
         Route::get('/', [BlogsController::class, 'blog'])->name('blog');
-        Route::get('/post', [BlogsController::class, 'post'])->name('post');
+        Route::get('/{slug}', [BlogsController::class, 'post'])->name('post');
     });
 });
 
@@ -54,18 +54,21 @@ Route::prefix('/master')->group(function () {
         return view('back.adminLogin');
     });
     Route::post('/master-login', [MasterController::class, 'masterLogin'])->name('masterLogin');
+    Route::get('/logout', [MasterController::class, 'logout'])->name('logout');
     Route::get('/dashboard', [MasterController::class, 'dashboard'])->name('masterDashboard');
-    
-    Route::prefix('/dbs')->group(function () {
-        Route::prefix('/tables')->group(function () {
-            Route::get('/create', [DatabaseController::class, 'createTable'])->name('createTable');
-            Route::get('{table}', [DatabaseController::class, 'openTable'])->name('openTable');
-            Route::get('update-row', [DatabaseController::class, 'updateTableRow'])->name('updateTableRow');
-        });
-    });
 
     Route::prefix('/products')->group(function () {
         Route::get('/', [AdminProductsController::class, 'products'])->name('adminProducts');
         Route::post('/add', [AdminProductsController::class, 'add'])->name('addProducts');
+    });
+
+    // Posts
+    Route::prefix('/posts')->group(function () {
+        Route::get('/', [AdminPostsController::class, 'posts']);
+        Route::get('/add', [AdminPostsController::class, 'add']);
+        Route::post('/add-post-form', [AdminPostsController::class, 'insertPost']);
+        Route::get('/edit', [AdminPostsController::class, 'edit']);
+        Route::get('/delete', [AdminPostsController::class, 'delete']);
+        Route::post('/update-post-form', [AdminPostsController::class, 'updatePost']);
     });
 });

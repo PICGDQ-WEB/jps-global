@@ -1,9 +1,17 @@
 $green: #00c87a
-// $green: rgb(68,151,69)
-$blackOp: rgba(12, 12, 12, .70)
+// $green: rgb(24, 24, 24)
+$blackOp: rgba(255, 255, 255, 0.7)
 
 *
     text-align: left !important
+
+::-moz-selection
+  color: #fff
+  background: $green
+
+::selection
+  color: #fff
+  background: $green
 
 a
     text-decoration: none !important
@@ -19,6 +27,11 @@ p a
 
 h1,h2,h3,h4,h5,h6
     font-weight: 900 !important
+
+.list-group-item.active
+    color: #fff !important
+    background-color: $green !important
+    border-color: $green !important
 
 body
     font-family: 'IBM Plex Sans', sans-serif !important
@@ -76,7 +89,7 @@ body
     transform: translate(-50%, -50%)
 
 .nav-link
-    color: #fff !important
+    color: #0f0f0f !important
     text-transform: uppercase
     font-size: 0.68rem !important
     letter-spacing: 0.7px
@@ -93,7 +106,7 @@ body
 
 .nav-item .dropdown-menu .dropdown-item
     font-size: 0.8rem
-    color: #bbb !important
+    color: #242424 !important
 .nav-item .dropdown-menu .dropdown-item:hover
     color: $green !important
     background: $blackOp
@@ -111,6 +124,12 @@ body
     width: 100%
     background: #00000055
     z-index: 2
+
+#hero__title
+    font-weight: 500 !important
+    -webkit-text-stroke: 1px #fff
+    color: #ffffff00
+
 
 footer ul
     list-style: none
@@ -245,3 +264,37 @@ footer .input_field
     backdrop-filter: blur(40px) !important
     border-radius: 20px
     filter: saturate(1.3)
+
+.timeline_image
+    height: 400px
+    width: 100%
+    object-fit: cover
+
+.steps .stepActive
+    display: row !important
+
+#steps_tabs button
+    border: 1px solid #eee
+    border: 1px solid $green
+    color: $green
+    background-color: #fff
+    padding: 8px
+    margin-bottom: 8px
+
+#steps_tabs button:hover
+    background-color: $green
+    color: #fff
+
+.tab__active
+    background-color: $green !important
+    color: #fff !important
+
+.steps h3
+    color: $green
+
+.steps img
+    border-radius: 10px
+
+.steps p
+    font-size: 1.2rem !important
+    color: #272727

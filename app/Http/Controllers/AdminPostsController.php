@@ -11,7 +11,7 @@ class AdminPostsController extends Controller
         $posts = DB::table('posts')
         ->orderBy('id', 'desc')
         ->get();
-        if(session()->has('user'))
+        if(session()->has('master'))
         {
             return view('back.posts.posts', [
                 'posts' => $posts
@@ -19,30 +19,30 @@ class AdminPostsController extends Controller
         }
         else
         {
-            return redirect('/dq-admin');
+            return redirect('/master/dashboard');
         }
     }
 
     public function add()
     {
-        if(session()->has('user'))
+        if(session()->has('master'))
         {
             return view('back.posts.add');
         }
         else
         {
-            return redirect('/dq-admin');
+            return redirect('/master/dashboard');
         }
     }
 
     public function edit()
     {
         $pid = $_GET['pid'];
-        $data = DB::table('blogs')
+        $data = DB::table('posts')
                 ->where('id', $pid)
                 ->first();
         
-        if(session()->has('user'))
+        if(session()->has('master'))
         {
             return view('back.posts.edit', [
                 'data' => $data
@@ -50,7 +50,7 @@ class AdminPostsController extends Controller
         }
         else
         {
-            return redirect('/dq-admin');
+            return redirect('/master/dashboard');
         }
     }
 
@@ -74,19 +74,18 @@ class AdminPostsController extends Controller
     {
         //Banners Image
         $bannerImg = public_path().'/assets/images/blogs/';
-        $bfile = $req->featured_image;
+        $bfile = $req->p_banner;
         if($bfile != "")
         {
             $banners = $bfile->getClientOriginalName();
             $bfile->move($bannerImg, $banners);
         }
 
-        $q = DB::table('blogs')->insert([
+        $q = DB::table('posts')->insert([
             'post_desc' => $req->post_desc,
             'post_title' => $req->post_title,
-            'p_slug' => $req->p_slug,
-            'featured_image' => $banners,
-            'head_scripts' => $req->head_scripts,
+            'post_url' => $req->p_slug,
+            'post_featured' => $banners,
         ]);
         if($q)
         {
@@ -100,11 +99,11 @@ class AdminPostsController extends Controller
 
     public function updatePost(Request $req)
     {
-        $id = $req->id;
+        $id = $req->post_id;
 
-        $prev = DB::table('blogs')->where('id', $id)->first();
+        $prev = DB::table('posts')->where('id', $id)->first();
 
-        $q = DB::table('blogs')->where('id', $id);
+        $q = DB::table('posts')->where('id', $id);
 
         if($req->post_desc != $prev->post_desc)
         {
@@ -114,17 +113,9 @@ class AdminPostsController extends Controller
         {
             $q->update(['post_title'=>$req->post_title]);
         }
-        if($req->p_slug != $prev->p_slug)
+        if($req->post_url != $prev->post_url)
         {
-            $q->update(['p_slug'=>$req->p_slug]);
-        }
-        if($req->short_desc != $prev->short_desc)
-        {
-            $q->update(['short_desc'=>$req->short_desc]);
-        }
-        if($req->head_scripts != $prev->head_scripts)
-        {
-            $q->update(['head_scripts'=>$req->head_scripts]);
+            $q->update(['post_url'=>$req->post_url]);
         }
 
         //Banners Image
@@ -135,7 +126,7 @@ class AdminPostsController extends Controller
             $banners = $bfile->getClientOriginalName();
             if($banners != $prev->featured_image)
             {
-                $query = $q->update(['featured_image' => $banners]);
+                $query = $q->update(['post_featured' => $banners]);
                 $bfile->move($bannerImg, $banners);
             }
         }

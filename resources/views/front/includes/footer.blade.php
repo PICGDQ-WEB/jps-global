@@ -1,4 +1,4 @@
-<footer class="bg-black py-5">
+<footer class="bg-light py-5">
     <div class="container">
         <div class="row m-0">
             <div class="col-lg-3 col-md-6 my-md-3 mb-3">
@@ -58,7 +58,7 @@
                 <div class="footer__head mb-2" style="font-size: 1.2rem;">Subscribe to our newsletter</div>
                 <form id="enquiryForm">
                     <div class="mb-3">
-                        <label for="" style="font-size: 13px; color: #eee;">Your email</label>
+                        <label for="" style="font-size: 13px; color: #6d6d6d;">Your email</label>
                         <input type="email" name="email" class="input_field">
                     </div>
                     <div>

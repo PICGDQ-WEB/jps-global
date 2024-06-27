@@ -19,25 +19,22 @@
 
 <div class="container my-md-5 p-0">
     <div class="row m-0 py-3">
-        @for ($i=1; $i<=3; $i++)
-        <div class="col-lg-4 col-md-6 mb-5">
-            <div class="card product__card">
-                <div class="overlay">
-                    <a href="{{route('post')}}">
-                        <button class="btn btn-dark rounded-0"><i class="fa-regular fa-eye"></i> Read more</button>
-                    </a>
-                </div>
-                <img src="/front/media/images/jasmine-rice.jpg" alt="" class="w-100">
-                <div class="p-3">
-                    <h2 style="font-size: 1.4rem;" class="mb-0">Lorem ipsum dolor sit amet consec tetur.</h2>
-                    <div class="d-flex mt-2 text-secondary" style="font-size: 12px;">
-                        <div><i class="fa-solid fa-globe-asia"></i></div>
-                        <div class="pe-1">Published on {{date('d-m-Y')}}</div>
+        @foreach ($posts as $item)
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="card product__card">
+                    <img src="/assets/images/blogs/{{$item->post_featured}}" alt="" class="w-100">
+                    <div class="p-3">
+                        <a href="{{route('post', ['slug'=>$item->post_url])}}" class="stretched-link">
+                            <h2 style="font-size: 1.4rem;" class="mb-0">{{$item->post_title}}</h2>
+                        </a>
+                        <div class="d-flex mt-2 text-secondary" style="font-size: 12px;">
+                            <div><i class="fa-solid fa-globe-asia"></i></div>
+                            <div class="pe-1">Published on {{date('d-m-Y', strtotime($item->post_added))}}</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        @endfor
+        @endforeach
     </div>
 </div>
 

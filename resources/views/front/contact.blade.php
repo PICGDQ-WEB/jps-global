@@ -8,7 +8,7 @@
 
 {{-- Header Top  --}}
 <section>
-    <div class="bg-black text-light d-flex align-items-end" id="top__header">
+    <div class="bg-light text-dark d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <p class="text-uppercase text-secondary">Contact Us</p>
             <h1 style="font-weight: 900;">Let's Work Together</h1>
@@ -86,7 +86,7 @@
             processData: false
         }).done(function() {
             alert('Your mail is sent!');
-            $(this).children().find('button').html('Subscribe');
+            $(this).children().find('button').html('Send message');
         }).fail(function(error) {
             alert('Oops... ' + JSON.stringify(error));
             $(this).children().find('button').html('Retry');

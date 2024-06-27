@@ -43,12 +43,6 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function(){
-        $('#addProductModal').modal('show');
-    });
-</script>
-
 <div class="p-3 d-flex align-items-center">
     <div>
         <h3 class="mb-0">Products</h3>

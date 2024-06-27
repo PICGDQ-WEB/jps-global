@@ -35,4 +35,12 @@ class MasterController extends Controller
             return redirect()->back();
         }
     }
+
+    public function logout()
+    {
+        session()->pull('master');
+        session()->pull('masterName');
+        return redirect('/master');
+    }
+
 }

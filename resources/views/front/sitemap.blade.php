@@ -8,8 +8,8 @@
 
 {{-- Header Top  --}}
 <section>
-    <div class="bg-black text-light" style="min-height: 80vh;">
-        <div class="container" style="padding-top: 130px;">
+    <div class="bg-light text-dark" style="min-height: 80vh;">
+        <div class="container" style="padding-top: 140px;">
 
             <div class="row m-0" id="sitemap__cont">
                 <div class="col-lg-4 mb-5">

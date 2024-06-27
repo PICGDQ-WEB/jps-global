@@ -77,7 +77,7 @@
     </div>
 </div>
 
-<section style="padding-top: 110px;" class="bg-black text-gray">
+<section style="padding-top: 110px;" class="bg-light text-gray">
     <div class="container py-md-4 px-0">
         <div class="productImageHolder row m-0">
             <div class="col-lg-5 mb-4">
