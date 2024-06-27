@@ -24,7 +24,7 @@
 
 <section>
     <div class="container py-3 mt-3">
-        <div class="d-md-flex align-items-center justify-content-between">
+        <div class="d-lg-flex align-items-center justify-content-between">
             <div style="font-size: 1.3rem; font-weight: 800;" class="text-secondary mb-3"><i class="fa-solid fa-shop"></i> &nbsp;Products ({{$products->count()}})</div>
             <div class="col-lg-5 col-12">
                 <input type="text" class="my-form-control" placeholder="Filter search" id="filterSearch" onkeyup="filterSearch()">
