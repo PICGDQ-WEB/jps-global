@@ -4,7 +4,7 @@
         <img src="/front/media/JPS Global Logo.svg" class="brand__logo" alt="JPS Global Logo">
       </a>
       <button class="navbar-toggler btn-light rounded-0 border-success py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars text-success"></i>
+        <i class="fa-solid fa-bars text-dark"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-0">

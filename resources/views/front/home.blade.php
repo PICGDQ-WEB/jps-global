@@ -9,12 +9,13 @@
             height: 80vh;
         }   
     </style>
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
 @endsection
 
 @section('body')
     
 {{-- slider  --}}
-<div class="swiper position-relative">
+{{-- <div class="swiper position-relative">
     <div class="overl__Y">
         <div class="d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;">
             <h1 id="hero__title" class="text-center display-1">Discover The World<br/>In Every Bite!</h1>
@@ -31,8 +32,35 @@
         <img src="/front/media/slider/3.webp" alt="">
       </div>
     </div>
-</div>
+</div> --}}
 {{-- end slider  --}}
+
+<div id="hero_video_section">
+    <video
+        id="my-video"
+        class="video-js"
+        autoplay="autoplay"
+        muted loop
+        preload="auto"
+        poster="/assets/video_thumb.png"
+        data-setup="{}"
+        class="hero__video"
+        style="width: 100%;"
+    >
+        <source src="/assets/video.mp4" type="video/mp4" />
+        <source src="/assets/video.mp4" type="video/webm" />
+        <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        </p>
+    </video>
+
+    <div class="overl__Y">
+        <div class="d-flex align-items-center justify-content-center" style="height: 100%; width: 100%;">
+            <h1 id="hero__title" class="text-center display-1">Discover The World<br/>In Every Bite!</h1>
+        </div>
+    </div>
+</div>
 
 <div class="bg-white py-5">
     <div class="container">
@@ -402,6 +430,10 @@
 @endsection
 
 @section('foot')
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script>
+        videojs('player', {autoplay: true});
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
