@@ -59,10 +59,10 @@
                 <form id="enquiryForm">
                     <div class="mb-3">
                         <label for="" style="font-size: 13px; color: #6d6d6d;">Your email</label>
-                        <input type="email" name="email" class="input_field">
+                        <input type="email" name="email_addr" class="input_field">
                     </div>
                     <div>
-                        <button class="btn btn-warning btn-sm" type="submit"><i class="fa-solid fa-arrow-right"></i> Subscribe</button>
+                        <button class="btn btn-warning btn-sm" type="submit" id="enqBtn"><i class="fa-solid fa-arrow-right"></i> Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -89,7 +89,7 @@
 <script>
 $('#enquiryForm').on('submit', function(event) {
     event.preventDefault();
-    $(this).children().find('input').prop('disabled', true);
+    $(this).children().find('input').prop('readonly', true);
     $(this).children().find('button').prop('disabled', true);
     $(this).children().find('button').html('Please wait');
     
@@ -105,14 +105,15 @@ $('#enquiryForm').on('submit', function(event) {
         processData: false
     }).done(function() {
         alert('Your mail is sent!');
-        $(this).children().find('input').prop('disabled', false);
-        $(this).children().find('button').prop('disabled', false);
-        $(this).children().find('button').html('Subscribe');
+        $('#enquiryForm')[0].reset();
+        $('#enquiryForm').children().find('input').prop('readonly', false);
+        $('#enquiryForm').children().find('button').prop('disabled', false);
+        $('#enquiryForm').children().find('button').html('Subscribe');
     }).fail(function(error) {
         alert('Oops... ' + JSON.stringify(error));
-        $(this).children().find('input').prop('disabled', false);
-        $(this).children().find('button').prop('disabled', false);
-        $(this).children().find('button').html('Retry');
+        $('#enquiryForm').children().find('input').prop('readonly', false);
+        $('#enquiryForm').children().find('button').prop('disabled', false);
+        $('#enquiryForm').children().find('button').html('Retry');
     });
 });
 </script>
