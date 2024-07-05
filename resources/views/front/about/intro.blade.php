@@ -93,11 +93,11 @@
                     <div class="p-3">
                         <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Yoginder Singh</h3>
                         <p>CMD</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut delectus alias magni libero, aperiam ratione expedita, voluptates cumque maxime animi fuga perferendis sequi cupiditate eum possimus qui sint!</p>
-                        <div>
+                        <p>A visionary leader and driving force behind the company's success. His strategic foresight and commitment to quality have not only enhanced production standards but also established strong relationships with clients.</p>
+                        {{-- <div>
                             <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="#" class="pe-1"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -107,11 +107,11 @@
                     <div class="p-3">
                         <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Yuvraj Rana</h3>
                         <p>Director</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut delectus alias magni libero, aperiam ratione expedita, voluptates cumque maxime animi fuga perferendis sequi cupiditate eum possimus qui sint!</p>
-                        <div>
+                        <p>His wealth of expertise in operations and management to the company. With a strong background in industrial engineering and business management, he has been instrumental in optimizing the company's production processes and enhancing efficiency.</p>
+                        {{-- <div>
                             <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="#" class="pe-1"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -121,11 +121,11 @@
                     <div class="p-3">
                         <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Siddharth Singh</h3>
                         <p>Director</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut delectus alias magni libero, aperiam ratione expedita, voluptates cumque maxime animi fuga perferendis sequi cupiditate eum possimus qui sint!</p>
-                        <div>
+                        <p>His keen understanding of market dynamics and consumer preferences has enabled the company to expand its global footprint and cater to diverse customer needs.</p>
+                        {{-- <div>
                             <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="#" class="pe-1"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
