@@ -9,7 +9,7 @@
 
 {{-- Header Top  --}}
 <section>
-    <div class="bg-black text-light d-flex align-items-end" id="top__header">
+    <div class="bg-dark text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <p class="text-uppercase text-secondary">Our Gallery</p>
             <h1 style="font-weight: 900;">Media & Gallery</h1>

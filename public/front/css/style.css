@@ -31,6 +31,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900 !important;
 }
 
+.welcome_box {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+
 .list-group-item.active {
   color: #fff !important;
   background-color: #00c87a !important;
@@ -81,7 +91,7 @@ body {
 }
 
 .nav__bar {
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(38, 38, 38, 0.7) !important;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   z-index: 1000;
@@ -107,7 +117,7 @@ body {
 }
 
 .nav-link {
-  color: #0f0f0f !important;
+  color: #e5e5e5 !important;
   text-transform: uppercase;
   font-size: 0.68rem !important;
   letter-spacing: 0.7px;
@@ -121,19 +131,19 @@ body {
 .nav-item .dropdown-menu {
   border: none;
   box-shadow: 0px 1px 42px 0px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(38, 38, 38, 0.7) !important;
   -webkit-backdrop-filter: blur(10px) !important;
           backdrop-filter: blur(10px) !important;
 }
 
 .nav-item .dropdown-menu .dropdown-item {
   font-size: 0.8rem;
-  color: #242424 !important;
+  color: #e5e5e5 !important;
 }
 
 .nav-item .dropdown-menu .dropdown-item:hover {
   color: #00c87a !important;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(38, 38, 38, 0.7);
 }
 
 .swiper-slide img {
@@ -347,8 +357,8 @@ footer .input_field {
 }
 
 #steps_tabs button {
+  border-radius: 8px;
   border: 1px solid #eee;
-  border: 1px solid #00c87a;
   color: #00c87a;
   background-color: #fff;
   padding: 8px;
@@ -376,6 +386,15 @@ footer .input_field {
 .steps p {
   font-size: 1.2rem !important;
   color: #272727;
+}
+
+.carousel-item img {
+  height: 70vh;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 1px;
 }
 
 @media screen and (max-width: 900px) {

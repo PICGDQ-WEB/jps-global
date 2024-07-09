@@ -8,7 +8,7 @@
 
 {{-- Header Top  --}}
 <section>
-    <div class="bg-light text-dark d-flex align-items-end" id="top__header">
+    <div class="bg-dark text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <p class="text-uppercase text-secondary"><i class="fa-solid fa-globe-asia"></i> Published on {{date('d M, Y', strtotime($post->post_added))}}</p>
             <h1 style="font-weight: 900;" class="text-capitalize">{{$post->post_title}}</h1>

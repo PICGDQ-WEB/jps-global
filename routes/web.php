@@ -39,7 +39,7 @@ Route::prefix('/')->group(function () {
     Route::prefix('/products')->group(function () {
         Route::get('/', [ProductsController::class, 'products'])->name('products');
         Route::get('/{category}', [ProductsController::class, 'category'])->name('category');
-        // Route::get('/product', [ProductsController::class, 'product'])->name('product');
+        Route::get('/{category}/{sub}', [ProductsController::class, 'sub'])->name('sub');
     });
     
     Route::prefix('/blog')->group(function () {

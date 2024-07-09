@@ -1,6 +1,6 @@
 $green: #00c87a
 // $green: rgb(24, 24, 24)
-$blackOp: rgba(255, 255, 255, 0.7)
+$blackOp: rgba(38, 38, 38, 0.7)
 
 *
     text-align: left !important
@@ -27,6 +27,15 @@ p a
 
 h1,h2,h3,h4,h5,h6
     font-weight: 900 !important
+
+.welcome_box
+    z-index: 1000
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    background: #fff
 
 .list-group-item.active
     color: #fff !important
@@ -89,7 +98,7 @@ body
     transform: translate(-50%, -50%)
 
 .nav-link
-    color: #0f0f0f !important
+    color: #e5e5e5 !important
     text-transform: uppercase
     font-size: 0.68rem !important
     letter-spacing: 0.7px
@@ -106,7 +115,7 @@ body
 
 .nav-item .dropdown-menu .dropdown-item
     font-size: 0.8rem
-    color: #242424 !important
+    color: #e5e5e5 !important
 .nav-item .dropdown-menu .dropdown-item:hover
     color: $green !important
     background: $blackOp
@@ -282,8 +291,9 @@ footer .input_field
     display: row !important
 
 #steps_tabs button
+    border-radius: 8px
     border: 1px solid #eee
-    border: 1px solid $green
+    // border: 1px solid $green
     color: $green
     background-color: #fff
     padding: 8px
@@ -306,6 +316,13 @@ footer .input_field
 .steps p
     font-size: 1.2rem !important
     color: #272727
+
+.carousel-item img
+    height: 70vh
+
+.dropdown:hover .dropdown-menu
+    display: block
+    margin-top: 1px
 
 @media screen and (max-width: 900px)
     #hero_video_section

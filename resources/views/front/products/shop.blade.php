@@ -13,7 +13,7 @@
 
 {{-- Header Top  --}}
 <section>
-    <div class="bg-light text-dark d-flex align-items-end" id="top__header">
+    <div class="bg-dark text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <p class="text-uppercase text-secondary">Get your favourite and healthy rice</p>
             <h1 style="font-weight: 900;">Our Products</h1>

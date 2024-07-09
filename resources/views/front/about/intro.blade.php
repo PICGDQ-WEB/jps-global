@@ -8,7 +8,7 @@
 
 {{-- Header Top  --}}
 <section>
-    <div class="bg-light text-dark d-flex align-items-end" id="top__header">
+    <div class="bg-dark text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <h1 style="font-weight: 900;">Ready to Taste the Finest?</h1>
             <p class="text-uppercase text-secondary">Take a journey with us where taste meets uncompromised quality – because your culinary satisfaction starts with the finest rice.</p>

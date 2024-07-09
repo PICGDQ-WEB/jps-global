@@ -4,15 +4,163 @@
     <title>Home | {{env('APP_NAME')}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
         .swiper {
             width: 100%;
             height: 80vh;
         }   
+        .anim{
+            position: relative;
+            height: 40vh;
+        }
+        @media screen and (max-width: 900px)
+        {
+            .anim{
+                position: relative;
+                height: 170px;
+            }
+        }
+        @media screen and (max-width: 480px)
+        {
+            .anim{
+                position: relative;
+                height: 100px;
+            }
+        }
+        .anim video, .anim h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        .anim video {
+            object-fit: cover;
+        }
+
+        .anim h1 {
+            font-size: 15vw;
+            font-family: "Merriweather", serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            background: white;
+            mix-blend-mode: screen;
+        }
+
+        .wrapper {
+            display: inline-block;
+        }
+
+        .video-main {
+            position: relative;
+            display: inline-block;
+        }
+
+        .video {
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 100%;
+            background: transparent;
+            color: #fff;
+            display: inline-block;
+            background: #00c87a;
+            z-index: 999;
+        }
+
+        @keyframes waves {
+        0% {
+            -webkit-transform: scale(0.2, 0.2);
+            transform: scale(0.2, 0.2);
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        }
+        50% {
+            opacity: 0.9;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+        }
+        100% {
+            -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        }
+        }
+
+        .fa-play:before {
+            content: "\f04b";
+        }
+
+        .waves {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            background: #ddfbf0;
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            border-radius: 100%;
+            right: -50px;
+            bottom: -50px;
+            z-index: -1;
+            -webkit-animation: waves 3s ease-in-out infinite;
+            animation: waves 3s ease-in-out infinite;
+        }
+                
+        .wave-1 {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        .wave-2 {
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .wave-3 {
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
     </style>
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
 @endsection
 
 @section('body')
+
+{{-- welcome animation  --}}
+<div class="welcome_box align-items-center justify-content-center p-4" style="display: flex; flex-direction: column;">
+    <div class="my-4">
+        <img src="/front/media/JPS Global Logo.svg" style="height: 80px;" alt="JPS Global Logo">
+    </div>
+    <div class="container anim">
+        <video autoplay muted loop preload poster="/assets/video_thumb.png" id="welcome_video">
+            <source src="/assets/video.mp4" />
+        </video>
+        <div>
+            <h1 class="text-center">discover</h1>
+        </div>
+     </div>
+    <div class="mb-2 text-center" style="font-weight: 700; font-size: 1.2rem;">
+        EMBARK ON A JOURNEY WITH THE FINEST BASMATI, FROM FIELDS TO YOUR PLATE
+    </div>
+    <div class="wrapper mt-4">
+        <div class="video-main">
+          <div class="promo-video">
+            <div class="waves-block">
+              <div class="waves wave-1"></div>
+              <div class="waves wave-2"></div>
+              <div class="waves wave-3"></div>
+            </div>
+          </div>
+          <a role="button" class="video video-popup mfp-iframe" data-lity id="play__button" onclick="play__button();"><i class="fa fa-play" style="position: relative; left: 30px; color: #fff;"></i></a>
+        </div>
+    </div>
+</div>
+{{-- end welcome animation  --}}
     
 {{-- slider  --}}
 {{-- <div class="swiper position-relative">
@@ -80,7 +228,7 @@
 </div>
 
 {{-- What we value  --}}
-<section>
+<section class="bg-dark text-light pb-3">
     <div class="container pt-5 my-4 px-0">
         <div class="pe-3">
             <div class="text-end">OUR FOCUS</div>
@@ -90,21 +238,21 @@
 
         <div class="row m-0 mt-5">
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-light rounded-0">
+                <div class="card border-dark rounded-0">
                     <img src="/front/media/used/rice-quality.jpg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
                     <h3 class="mt-3 mx-3 mb-0" style="font-weight: 900;">Quality Assurance</h3>
                     <p class="p-3 text-secondary">We handpick the best grains to ensure a consistently high-quality product.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-light rounded-0">
+                <div class="card border-dark rounded-0">
                     <img src="/front/media/used/workforce.jpg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
                     <h3 class="mt-3 mx-3 mb-0" style="font-weight: 900;">Vigilant Workforce</h3>
                     <p class="p-3 text-secondary">Qualified and skilled workforce, with manufacturing being monitored around-the-clock.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-light rounded-0">
+                <div class="card border-dark rounded-0">
                     <img src="/front/media/images/rice-variety.jpeg" alt="" class="w-100" style="height: 260px; object-fit: cover;">
                     <h3 class="mt-3 mx-3 mb-0" style="font-weight: 900;">Rice Variety</h3>
                     <p class="p-3 text-secondary">Discover a diverse range of Basmati rice to suit every culinary need.</p>
@@ -126,35 +274,80 @@
         <div class="row m-0 mt-4 pt-3">
             <div class="col-12" id="steps_tabs">
                 <button onclick="toggletab(this, 'step1')" class="tab__active">
-                    Research & Development
+                    <div class="text-center">
+                        <img src="/assets/process/rnd.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Research & Development
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step2')">
-                    Procurement
+                    <div class="text-center">
+                        <img src="/assets/process/procurement.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Procurement
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step3')">
-                    Paddy Cleaning
+                    <div class="text-center">
+                        <img src="/assets/process/paddy-cleaning.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Paddy Cleaning
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step4')">
-                    Storage
+                    <div class="text-center">
+                        <img src="/assets/process/storage.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Storage
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step5')">
-                    De-Husking
+                    <div class="text-center">
+                        <img src="/assets/process/de-husking.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        De-Husking
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step6')">
-                    Whitening and Polishing
+                    <div class="text-center">
+                        <img src="/assets/process/whitening-polishing.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Whitening and Polishing
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step7')">
-                    Grading
+                    <div class="text-center">
+                        <img src="/assets/process/grading.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Grading
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step8')">
-                    Quality Control
+                    <div class="text-center">
+                        <img src="/assets/process/grading.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Quality Control
+                    </div>
                 </button>
                 <button onclick="toggletab(this, 'step9')">
-                    Packaging & Distribution
+                    <div class="text-center">
+                        <img src="/assets/process/grading.png" alt="" style="height: 40px;">
+                    </div>
+                    <div class="text-center mt-2">
+                        Packaging & Distribution
+                    </div>
                 </button>
 
             </div>
-            <div class="steps mt-4">
+            <div class="steps my-4">
                 <div id="step1" class="row m-0 stepActive">
                     <div class="col-md-6 mb-3 order-sm-2">
                         <h3 class="display-6">Research & Development</h3>
@@ -252,16 +445,16 @@
 </section>
 
 {{-- About  --}}
-<section>
+<section class="bg-dark">
     <div class="container pt-lg-5 px-0">
         <div class="row m-0 justify-content-center">
-            <div class="col-lg-6 col-md-12 p-4 p-md-5 bg-white">
+            <div class="col-lg-6 col-md-12 p-4 p-md-5 bg-dark">
                 <div class="p-md-4">
-                    <h2 class="text-dark" style="font-size: 2.7rem;">About {{env('APP_NAME')}}</h2>
+                    <h2 class="text-light" style="font-size: 2.7rem;">About {{env('APP_NAME')}}</h2>
                     <div class="py-3">
-                        <p class="text-dark">Welcome to {{env('APP_NAME')}}, where a rich tradition meets modern quality assurance. Hailing from the heartland of Haryana, Karnal. We are extremely proud to provide a broad range of Indian basmati and non-basmati rice.</p>
-                        <p class="text-dark">Equipped with a state-of-the-art testing facility in our mill, we uphold stringent quality standards that only meets but exceeds expectations. We are dedicated to delivering superior quality in terms of taste, nutritional value, and overall satisfaction.</p>
-                        <p class="text-dark">Join us on a journey where tradition and innovation come together to bring you the finest rice experience from Haryana.</p>
+                        <p class="text-light">Welcome to {{env('APP_NAME')}}, where a rich tradition meets modern quality assurance. Hailing from the heartland of Haryana, Karnal. We are extremely proud to provide a broad range of Indian basmati and non-basmati rice.</p>
+                        <p class="text-light">Equipped with a state-of-the-art testing facility in our mill, we uphold stringent quality standards that only meets but exceeds expectations. We are dedicated to delivering superior quality in terms of taste, nutritional value, and overall satisfaction.</p>
+                        <p class="text-light">Join us on a journey where tradition and innovation come together to bring you the finest rice experience from Haryana.</p>
                     </div>
                     <a href="{{route('intro')}}">
                         <button class="btn btn-success rounded-0 py-3 px-4">Learn More</button>
@@ -269,7 +462,31 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 p-0">
-                <img src="/front/media/og/jps.jpeg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                {{-- <img src="/front/media/og/jps.jpeg" alt="" style="height: 100%; width: 100%; object-fit: cover;"> --}}
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/front/media/og/jps.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/front/media/og/image0.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/front/media/og/image1.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/front/media/og/image2.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -310,7 +527,7 @@
                     <div>
                         <div class="text-center"><i class="fa-solid fa-city fa-xl"></i></div>
                         <div class="counterNumber text-center">200+ Per Day</div>
-                        <p class="mb-0 counterDesc text-center">Production Capacity</p>
+                        <p class="mb-0 counterDesc text-center">Production Capacity / Tons</p>
                     </div>
                 </div>
             </div>
@@ -372,10 +589,10 @@
 <section>
     <div class="p-0 mb-5" style="background: #00c87a;">
         <div class="d-flex align-items-center justify-content-center m-0" style="height: 100%; width: 100%;">
-            <div class="col-10 col-lg-5 col-md-10 px-3 py-5 bg-white">
-                <div style="font-size: 0.8rem;" class="text-dark text-center">LET'S WORK TOGETHER</div>
-                <h2 class="text-dark text-center my-3" style="font-size: 2.8rem; font-weight: 900;">Contact us for more information</h2>
-                <p class="text-dark text-center container col-md-11">Reach Out and Elevate Your Dining Experience with Us!</p>
+            <div class="col-10 col-lg-5 col-md-10 px-3 py-5 bg-dark">
+                <div style="font-size: 0.8rem;" class="text-light text-center">LET'S WORK TOGETHER</div>
+                <h2 class="text-light text-center my-3" style="font-size: 2.8rem; font-weight: 900;">Contact us for more information</h2>
+                <p class="text-light text-center container col-md-11">Reach Out and Elevate Your Dining Experience with Us!</p>
                 <div class="text-center py-3">
                     <a href="{{route('contact')}}">
                         <button class="btn btn-success px-4 py-3 rounded-0">Contact Us</button>
@@ -447,6 +664,17 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("body").css("overflow", "hidden");
+        });
+        function play__button()
+        {
+            $('.welcome_box').slideToggle();
+            $("body").css("overflow", "auto");
+        }
     </script>
 
 @endsection

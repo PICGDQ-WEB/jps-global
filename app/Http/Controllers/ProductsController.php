@@ -27,8 +27,16 @@ class ProductsController extends Controller
         ]);
     }
 
-    // public function product()
-    // {
-    //     return view('front.products.product');
-    // }
+    public function sub($category, $sub)
+    {
+        $products = DB::table('products')
+                    ->where('folder', $category)
+                    ->where('product_category', $sub)
+                    ->get();
+        return view('front.products.sub', [
+            'sub' => $sub,
+            'products' => $products,
+            'category' => $category
+        ]);
+    }
 }

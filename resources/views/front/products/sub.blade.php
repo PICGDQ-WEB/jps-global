@@ -16,7 +16,7 @@
     <div class="bg-dark text-light d-flex align-items-end" id="top__header">
         <div class="container py-5">
             <p class="text-uppercase text-secondary">Get your favourite and healthy rice</p>
-            <h1 style="font-weight: 900;">{{$category}}</h1>
+            <h1 style="font-weight: 900;">{{$sub}}</h1>
         </div>
     </div>
 </section>
@@ -26,6 +26,7 @@
     <div class="container px-0 py-3 mb-3 mb-md-5 mt-4">
         {{-- <div class="text-secondary">Products will appear here...</div> --}}
 
+        
         <div class="row m-0">
             <div class="col-md-3 mb-4">
                 <div class="card p-0 rounded-0 border-light">
