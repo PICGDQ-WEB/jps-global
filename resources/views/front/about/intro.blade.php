@@ -83,52 +83,40 @@
 
 <section class="py-5">
     <div class="container my-4">
-        <h2>Our Team of Experts</h2>
-        <p>At JPS Global, our team of experts is the driving force, bringing taste, quality, and satisfaction to the table. </p>
+        {{-- <h2>Our Team of Experts</h2>
+        <p>At JPS Global, our team of experts is the driving force, bringing taste, quality, and satisfaction to the table. </p> --}}
 
         <div class="row m-0 py-5">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card product__card">
+            <div class="col-lg-12">
+                <div class="card product__card p-3">
                     {{-- <img src="/front/media/images/team1.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;"> --}}
                     <div class="p-3">
+                        <p>A visionary leader and driving force behind the company's success. His strategic foresight and commitment to quality have not only enhanced production standards but also established strong relationships with clients.</p>
                         <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Yoginder Singh</h3>
                         <p>CMD</p>
-                        <p>A visionary leader and driving force behind the company's success. His strategic foresight and commitment to quality have not only enhanced production standards but also established strong relationships with clients.</p>
-                        {{-- <div>
-                            <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" class="pe-1"><i class="fa-solid fa-envelope"></i></a>
-                        </div> --}}
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
+            {{-- <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card product__card">
-                    {{-- <img src="/front/media/images/team3.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;"> --}}
+                    <img src="/front/media/images/team3.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;">
                     <div class="p-3">
                         <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Yuvraj Rana</h3>
                         <p>Director</p>
                         <p>His wealth of expertise in operations and management to the company. With a strong background in industrial engineering and business management, he has been instrumental in optimizing the company's production processes and enhancing efficiency.</p>
-                        {{-- <div>
-                            <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" class="pe-1"><i class="fa-solid fa-envelope"></i></a>
-                        </div> --}}
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card product__card">
-                    {{-- <img src="/front/media/images/team2.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;"> --}}
+                    <img src="/front/media/images/team2.jpg" alt="" class="w-100" style="height: 300px; object-fit: cover;">
                     <div class="p-3">
                         <h3 class="m-0 mb-2" style="font-size: 1.2rem;">Siddharth Singh</h3>
                         <p>Director</p>
                         <p>His keen understanding of market dynamics and consumer preferences has enabled the company to expand its global footprint and cater to diverse customer needs.</p>
-                        {{-- <div>
-                            <a href="#" class="pe-1"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" class="pe-1"><i class="fa-solid fa-envelope"></i></a>
-                        </div> --}}
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
